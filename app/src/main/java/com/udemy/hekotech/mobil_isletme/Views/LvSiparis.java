@@ -22,6 +22,10 @@ public class LvSiparis extends RecyclerView.Adapter<LvSiparis.MyViewHolder> {
 
     private List<Siparis> list;
 
+    public LvSiparis(List<Siparis> elist) {
+        this.list = elist;
+    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public TextView order,total;

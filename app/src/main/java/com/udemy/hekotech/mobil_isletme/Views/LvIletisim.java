@@ -23,7 +23,11 @@ public class LvIletisim extends RecyclerView.Adapter<LvIletisim.MyViewHolder> {
 
 private List<Iletisim> list;
 
-public class MyViewHolder extends RecyclerView.ViewHolder{
+    public LvIletisim(List<Iletisim> liste) {
+        this.list=liste;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
     public TextView name,message,date,many;
     public Button sil_iletisim;

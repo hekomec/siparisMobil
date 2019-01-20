@@ -23,6 +23,10 @@ public class LvKurumsal  extends RecyclerView.Adapter<LvKurumsal.MyViewHolder> {
 
     private List<Kurumsal> list;
 
+    public LvKurumsal(List<Kurumsal> elist) {
+        this.list = elist;
+    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public TextView name,message,date,exp;

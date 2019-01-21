@@ -5,7 +5,7 @@ package com.udemy.hekotech.mobil_isletme.Classes;
  */
 
 public class Iletisim {
-    String date,many,message,name,id;
+    String date,many,message,name,id,number;
 
     public String getDate() {
         return date;
@@ -47,12 +47,21 @@ public class Iletisim {
         this.id = id;
     }
 
-    public Iletisim(String date, String many, String message, String name, String id){
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public Iletisim(String date, String many, String message, String name, String id, String number){
         this.date=date;
         this.many=many;
         this.message=message;
         this.name=name;
         this.id = id;
+        this.number = number;
     }
 
     public Iletisim(){

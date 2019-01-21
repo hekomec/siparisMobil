@@ -69,6 +69,7 @@ public class frIlerisim  extends Fragment {
                     String date = value.getDate();
                     String many = value.getMany();
                     String name = value.getName();
+                    String number = value.getNumber();
                     String message = value.getMessage();
 
                     String id = dataSnapshot1.getKey();
@@ -77,6 +78,7 @@ public class frIlerisim  extends Fragment {
                     fire.setMany(many);
                     fire.setMessage(message);
                     fire.setDate(date);
+                    fire.setNumber(number);
 
                     list.add(fire);
                     adapter.notifyDataSetChanged();

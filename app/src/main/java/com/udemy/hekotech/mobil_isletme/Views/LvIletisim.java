@@ -1,5 +1,7 @@
 package com.udemy.hekotech.mobil_isletme.Views;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -33,8 +35,8 @@ private List<Iletisim> list;
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-    public TextView name,message,date,many;
-    public Button sil_iletisim;
+    public TextView name,message,date,many,number;
+    public Button sil_iletisim,ara_iletisim;
     public MyViewHolder(View itemView){
         super(itemView);
         name = itemView.findViewById(R.id.c_iletisim_name);
@@ -42,6 +44,8 @@ private List<Iletisim> list;
         date = itemView.findViewById(R.id.c_iletisim_date);
         many = itemView.findViewById(R.id.c_iletisim_many);
         sil_iletisim = itemView.findViewById(R.id.c_iletisim_sil);
+        ara_iletisim=itemView.findViewById(R.id.c_iletisim_ara);
+        number = itemView.findViewById(R.id.c_iletisim_number);
     }
 
 
@@ -61,12 +65,21 @@ private List<Iletisim> list;
         holder.message.setText(mylist.getMessage());
         holder.many.setText(mylist.getMany());
         holder.date.setText(mylist.getDate());
+        holder.number.setText(mylist.getNumber());
         holder.sil_iletisim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dbiletisim = FirebaseDatabase.getInstance();
                 refIletisim = dbiletisim.getReference("iletisim");
                 refIletisim.child(mylist.getId()).removeValue();
+            }
+        });
+        holder.ara_iletisim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:"+mylist.getNumber()));
+                view.getContext().startActivity(call);
             }
         });
 

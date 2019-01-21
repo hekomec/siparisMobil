@@ -41,6 +41,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="many:"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/c_iletisim_many"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+
+                android:textSize="27dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="message:"
                 android:textSize="20dp" />
 
@@ -86,11 +108,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="many:"
+                android:text="number:"
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/c_iletisim_many"
+                android:id="@+id/c_iletisim_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -104,11 +126,19 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/c_iletisim_ara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ara" />
+
+            <Button
                 android:id="@+id/c_iletisim_sil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="sil" />
+
         </LinearLayout>
     </LinearLayout>
 

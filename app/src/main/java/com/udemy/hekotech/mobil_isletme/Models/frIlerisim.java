@@ -72,7 +72,7 @@ public class frIlerisim  extends Fragment {
                     String message = value.getMessage();
 
                     String id = dataSnapshot1.getKey();
-
+                    fire.setId(id);
                     fire.setName(name);
                     fire.setMany(many);
                     fire.setMessage(message);

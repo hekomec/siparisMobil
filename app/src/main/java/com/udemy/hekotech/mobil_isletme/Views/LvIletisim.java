@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.udemy.hekotech.mobil_isletme.Classes.Iletisim;
 import com.udemy.hekotech.mobil_isletme.Classes.Siparis;
 import com.udemy.hekotech.mobil_isletme.R;
@@ -20,6 +22,8 @@ import java.util.List;
 
 public class LvIletisim extends RecyclerView.Adapter<LvIletisim.MyViewHolder> {
 
+    FirebaseDatabase dbiletisim;
+    DatabaseReference refIletisim;
 
 private List<Iletisim> list;
 
@@ -60,7 +64,9 @@ private List<Iletisim> list;
         holder.sil_iletisim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                dbiletisim = FirebaseDatabase.getInstance();
+                refIletisim = dbiletisim.getReference("iletisim");
+                refIletisim.child(mylist.getId()).removeValue();
             }
         });
 

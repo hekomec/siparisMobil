@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.udemy.hekotech.mobil_isletme.Classes.Iletisim;
 import com.udemy.hekotech.mobil_isletme.Classes.Kurumsal;
 import com.udemy.hekotech.mobil_isletme.R;
@@ -20,7 +22,8 @@ import java.util.List;
 
 public class LvKurumsal  extends RecyclerView.Adapter<LvKurumsal.MyViewHolder> {
 
-
+    FirebaseDatabase dbkurumsal;
+    DatabaseReference refkurumsal;
     private List<Kurumsal> list;
 
     public LvKurumsal(List<Kurumsal> elist) {
@@ -60,7 +63,9 @@ public class LvKurumsal  extends RecyclerView.Adapter<LvKurumsal.MyViewHolder> {
         holder.sil_kurumsal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                dbkurumsal = FirebaseDatabase.getInstance();
+                refkurumsal = dbkurumsal.getReference("kurumsal");
+                refkurumsal.child(mylist.getId()).removeValue();
             }
         });
 

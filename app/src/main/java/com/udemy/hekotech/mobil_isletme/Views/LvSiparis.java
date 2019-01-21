@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.udemy.hekotech.mobil_isletme.Classes.Siparis;
 import com.udemy.hekotech.mobil_isletme.R;
 
@@ -19,7 +21,8 @@ import java.util.List;
 
 public class LvSiparis extends RecyclerView.Adapter<LvSiparis.MyViewHolder> {
 
-
+    FirebaseDatabase dbSiparis;
+    DatabaseReference refSiparis;
     private List<Siparis> list;
 
     public LvSiparis(List<Siparis> elist) {
@@ -55,7 +58,9 @@ public class LvSiparis extends RecyclerView.Adapter<LvSiparis.MyViewHolder> {
         holder.sil_siparis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+            dbSiparis = FirebaseDatabase.getInstance();
+            refSiparis = dbSiparis.getReference("siparis");
+            refSiparis.child(mylist.getId()).removeValue();
             }
         });
 

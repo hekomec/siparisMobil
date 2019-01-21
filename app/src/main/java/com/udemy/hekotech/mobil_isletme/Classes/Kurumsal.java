@@ -5,7 +5,7 @@ package com.udemy.hekotech.mobil_isletme.Classes;
  */
 
 public class Kurumsal {
-    String date,exp,message,name;
+    String date,exp,message,name,id;
 
     public String getDate() {
         return date;
@@ -39,11 +39,20 @@ public class Kurumsal {
         this.name = name;
     }
 
-    public Kurumsal(String date, String exp, String message, String name){
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Kurumsal(String date, String exp, String message, String name, String id){
         this.date=date;
         this.exp=exp;
         this.message=message;
         this.name=name;
+        this.id = id;
     }
     public Kurumsal(){
 

@@ -5,27 +5,36 @@ package com.udemy.hekotech.mobil_isletme.Classes;
  */
 
 public class Siparis {
-    String order,total;
+    String order,total,id;
 
     public String getOrder() {
         return order;
     }
 
-    public void setOrder(String order) {
-        order = order;
+    public void setOrder(String order_) {
+        order = order_;
     }
 
     public String getTotal() {
         return total;
     }
 
-    public void setTotal(String total) {
-        total = total;
+    public void setTotal(String total_) {
+        total = total_;
     }
 
-    public Siparis(String order, String total){
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Siparis(String order, String total, String id){
         this.order=order;
         this.total=total;
+        this.id = id;
     }
     public Siparis(){}
 

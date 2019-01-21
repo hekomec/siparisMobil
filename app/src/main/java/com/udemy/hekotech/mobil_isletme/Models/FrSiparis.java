@@ -65,8 +65,10 @@ public class FrSiparis extends Fragment {
 
                     String order = value.getOrder();
                     String total = value.getTotal();
+                    Log.d(TAG, "onDataChange: gelen siparis: "+order);
                     String id = dataSnapshot1.getKey();
 
+                    fire.setId(id);
                     fire.setOrder(order);
                     fire.setTotal(total);
 

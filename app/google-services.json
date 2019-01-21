@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "470594016004",
+    "firebase_url": "https://siparis-aec59.firebaseio.com",
+    "project_id": "siparis-aec59",
+    "storage_bucket": "siparis-aec59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470594016004:android:ca01a8d56b6bfd5e",
+        "android_client_info": {
+          "package_name": "com.udemy.hekotech.mobil_isletme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "470594016004-e5dsarsljtsfu6nbuqit4vjefdchijka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udemy.hekotech.mobil_isletme",
+            "certificate_hash": "fba58c782b65096d4d4eb1d4822070008738d034"
+          }
+        },
+        {
+          "client_id": "470594016004-c1a5pv104fqg46pu1unka2uuj3q10u7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPm2iIArRMRId1lSD4lS3hU7D4C75_lcE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "470594016004-c1a5pv104fqg46pu1unka2uuj3q10u7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
